@@ -1,0 +1,22 @@
+{
+    "resources": [{
+            "code": "",
+            "name": "--Please select--"
+	}, {
+            "code": "customers",
+            "name": "customers"
+	}, {
+            "code": "contacts",
+            "name": "contacts"
+	}, {
+            "code": "ccms-contacts",
+            "name": "ccms-contacts"
+	},
+        {
+            "code": "customers/{customer-id}",
+            "name": "customers/{customer-id}"
+	}, {
+            "code": "contacts/{contact-id}",
+            "name": "contacts/{contact-id}"
+	}]
+}

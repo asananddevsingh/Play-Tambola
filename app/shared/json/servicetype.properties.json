@@ -1,0 +1,18 @@
+{
+    "servicesType": [{
+        "code": "",
+        "name": "--Please select--"
+	}, {
+        "code": "GET",
+        "name": "GET"
+	}, {
+        "code": "PUT",
+        "name": "PUT"
+	}, {
+        "code": "POST",
+        "name": "POST"
+	}, {
+        "code": "DELETE",
+        "name": "DELETE"
+	}]
+}

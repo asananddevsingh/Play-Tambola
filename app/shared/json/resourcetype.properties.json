@@ -1,0 +1,22 @@
+{
+
+    "resourcesType": [{
+        "code": "",
+        "name": "--Please select--"
+	}, {
+        "code": "sold-tos",
+        "name": "sold-tos"
+	}, {
+        "code": "bill-tos",
+        "name": "bill-tos"
+	}, {
+        "code": "ship-tos",
+        "name": "ship-tos"
+	}, {
+        "code": "payers",
+        "name": "payers"
+	}, {
+        "code": "contacts",
+        "name": "contacts"
+	}]
+}
