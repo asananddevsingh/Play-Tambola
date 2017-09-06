@@ -29,6 +29,13 @@
             margin: 0px auto;
         }
         
+        .container-fluid-2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            margin: 0px auto;
+        }
+        
         .bg-1 {
             background-color: #1abc9c;
             color: #ffffff;
@@ -55,9 +62,64 @@
             margin: 0px auto;
         }
         
+        .pt-margin-10 {
+            margin: 10px 0;
+        }
+        
         input {
             color: #555;
         }
+        
+        .modal {
+            color: #555;
+        }
+        
+        .pt-tkt-row>input {
+            width: 30px !important;
+            height: 30px !important;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .input-group-addon {
+            margin: 0;
+            padding: 0;
+            min-width: 20px;
+        }
+        
+        .pt-txt-columns>span {
+            width: 30px;
+        }
+        
+        .pt-txt-columns>span:first-child {
+            width: 20px;
+        }
+        /*****************************************************************/
+        /* Large desktops and laptops */
+        
+        @media (min-width: 1200px) {}
+        /* Landscape tablets and medium desktops */
+        
+        @media (min-width: 992px) and (max-width: 1199px) {}
+        /* Portrait tablets and small desktops */
+        
+        @media (min-width: 768px) and (max-width: 991px) {}
+        /* Landscape phones and portrait tablets */
+        
+        @media (max-width: 767px) {
+            .pt-tkt-row>input {
+                width: 27px !important;
+            }
+            .pt-txt-columns>span {
+                width: 27px;
+            }
+        }
+        /* Portrait phones and smaller */
+        
+        @media (max-width: 480px) {}
+        /*****************************************************************/
 
     </style>
 </head>
@@ -73,9 +135,9 @@
     </div>
 
     <!-- Second Container -->
-    <div class="container-fluid bg-2 text-center">
+    <div class="container-fluid-2 bg-2 text-center">
         <div class="row pt-container">
-            <div class="col-md-10 col-sm-12">
+            <div class="col-md-10 col-sm-6 col-xs-12 pt-margin-10">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Number" name="number">
                     <div class="input-group-btn">
@@ -83,8 +145,86 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-sm-12">
-                <button type="button" class="btn btn-primary btn-block">Create new ticket</button>
+            <div class="col-md-2 col-sm-6 col-xs-12 pt-margin-10">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#newTicket">Create new ticket</button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="newTicket" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header text-left">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Create New Ticket</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row pt-txt-columns">
+                                        <span class="input-group-addon"></span>
+                                        <span class="input-group-addon">C1</span>
+                                        <span class="input-group-addon">C2</span>
+                                        <span class="input-group-addon">C3</span>
+                                        <span class="input-group-addon">C4</span>
+                                        <span class="input-group-addon">C5</span>
+                                        <span class="input-group-addon">C6</span>
+                                        <span class="input-group-addon">C7</span>
+                                        <span class="input-group-addon">C8</span>
+                                        <span class="input-group-addon">C9</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row">
+                                        <span class="input-group-addon">R1</span>
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row">
+                                        <span class="input-group-addon">R2</span>
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row">
+                                        <span class="input-group-addon">R3</span>
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -95,16 +235,17 @@
             <div class="col-md-12">
                 <h3 class="margin">Your available tickets</h3>
             </div>
+
         </div>
 
         <div class="row pt-container">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-xs-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-xs-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-xs-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
