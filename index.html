@@ -3,469 +3,56 @@
 
 <head>
     <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Bootstrap Theme Simply Me</title>
+    <title>Play Tambola</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Senior Software Engineer | Global Logic | Noida, India">
+    <meta name="author" content="Anand Dev Singh">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap3.3.7.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <script type="text/javascript" src="./assets/libs/jquery/jquery3.2.1.min.js"></script>
-    <script type="text/javascript" src="./assets/libs/bootstrap/bootstrap3.3.7.min.js"></script>
-    <style>
-        body {
-            font: 20px Montserrat, sans-serif;
-            line-height: 1.8;
-            color: #f5f6f7;
-            margin: 0 auto;
-        }
-        
-        p {
-            font-size: 16px;
-        }
-        
-        .container-fluid {
-            padding-top: 40px;
-            padding-bottom: 40px;
-            width: 100%;
-            margin: 0px auto;
-        }
-        
-        .pt-container-fluid {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 100%;
-            margin: 0px auto;
-        }
-        
-        .bg-1 {
-            background-color: #1abc9c;
-            color: #ffffff;
-        }
-        
-        .bg-2 {
-            background-color: #474e5d;
-            color: #ffffff;
-        }
-        
-        .bg-3 {
-            background-color: #ffffff;
-            color: #555555;
-        }
-        
-        .bg-4 {
-            background-color: #2f2f2f;
-            color: #fff;
-        }
-        
-        .pt-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0px auto;
-        }
-        
-        .pt-margin-10 {
-            margin: 10px 0;
-        }
-        
-        input {
-            color: #555;
-        }
-        
-        .modal {
-            color: #555;
-        }
-        
-        .pt-tkt-row>input {
-            width: 30px !important;
-            height: 30px !important;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-            font-weight: 600;
-        }
-        
-        .input-group-addon {
-            margin: 0;
-            padding: 0;
-            min-width: 20px;
-        }
-        
-        .pt-tkt-columns>span {
-            width: 30px;
-        }
-        
-        .pt-tkt-columns>span:first-child {
-            width: 20px;
-        }
-        
-        .pt-table {
-            width: 96%;
-            margin: 0 2%;
-            font-size: 16px;
-        }
-        
-        .pt-table>tbody>tr>td,
-        .pt-table>tbody>tr>th,
-        .pt-table>tfoot>tr>td,
-        .pt-table>tfoot>tr>th,
-        .pt-table>thead>tr>td,
-        .pt-table>thead>tr>th {
-            padding: 0;
-        }
-        
-        .pt-row-number {
-            background-color: #474e5d;
-            color: #fff;
-        }
-        
-        .pt-tkt-success {
-            border-color: #008400;
-            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 50px rgba(126, 239, 104, 0.6);
-            outline: 0 none;
-        }
-        
-        .pt-tkt-success>.panel-heading {
-            color: #ffffff;
-            background-color: #3c8e3d;
-            border-color: #008400;
-            box-shadow: 0 30px 5px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(126, 239, 104, 0.6);
-            outline: 0 none;
-            border: none;
-        }
-        
-        .pt-cross {
-            position: relative;
-            font-weight: bolder;
-        }
-        
-        td.pt-cross::before {
-            position: absolute;
-            content: "";
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-image: linear-gradient(to bottom right, transparent calc(50% - 2px), red, transparent calc(50% + 2px));
-            width: 100%;
-        }
-        
-        td.pt-cross::after {
-            position: absolute;
-            content: "";
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-image: linear-gradient(to bottom left, transparent calc(50% - 2px), red, transparent calc(50% + 2px));
-            width: 100%;
-        }
-        /*****************************************************************/
-        /* Large desktops and laptops */
-        
-        @media (min-width: 1200px) {}
-        /* Landscape tablets and medium desktops */
-        
-        @media (min-width: 992px) and (max-width: 1199px) {}
-        /* Portrait tablets and small desktops */
-        
-        @media (min-width: 768px) and (max-width: 991px) {}
-        /* Landscape phones and portrait tablets */
-        
-        @media (max-width: 767px) {
-            .pt-tkt-row>input {
-                width: 27px !important;
-            }
-            .pt-tkt-columns>span {
-                width: 27px;
-            }
-        }
-        /* Portrait phones and smaller */
-        
-        @media (max-width: 480px) {}
-        /*****************************************************************/
 
-    </style>
+    <!-- Custom CSS lib -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
-<body>
+<body ng-app="tambola" ng-cloak>
 
+    <div ui-view></div>
+    
+    <!-- jQuery -->
+    <script src="./assets/libs/jquery/jquery3.2.1.min.js"></script>
 
-    <!-- First Container -->
-    <div class="container-fluid bg-1 text-center">
-        <h1>Play Tambola</h1>
-        <img src="/assets/images/1200x630bb.jpg" class="img-responsive img-circle" style="display:inline" alt="Tambola" width="300" height="300">
-        <h3>It's simple, It's fast and It's free</h3>
-    </div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./assets/libs/bootstrap/bootstrap3.3.7.min.js"></script>
 
-    <!-- Second Container -->
-    <div class="pt-container-fluid bg-2 text-center">
-        <div class="row pt-container">
-            <div class="col-md-10 col-sm-6 col-xs-12 pt-margin-10">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Number" name="number">
-                    <div class="input-group-btn">
-                        <button class="btn btn-success btn-block" type="submit">GO</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6 col-xs-12 pt-margin-10">
-                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#newTicket">Create new ticket</button>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="newTicket" role="dialog">
-                <div class="modal-dialog modal-lg">
+    <!-- JS -->
+    <script src="./assets/libs/angular/angular.js"></script>
+    <script src="./assets/libs/angular/angular-ui-router.js"></script>
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header text-left">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h3 class="modal-title">Create New Ticket</h3>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="input-group pt-tkt-row pt-tkt-columns">
-                                        <span class="input-group-addon"></span>
-                                        <span class="input-group-addon">C1</span>
-                                        <span class="input-group-addon">C2</span>
-                                        <span class="input-group-addon">C3</span>
-                                        <span class="input-group-addon">C4</span>
-                                        <span class="input-group-addon">C5</span>
-                                        <span class="input-group-addon">C6</span>
-                                        <span class="input-group-addon">C7</span>
-                                        <span class="input-group-addon">C8</span>
-                                        <span class="input-group-addon">C9</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input-group pt-tkt-row">
-                                        <span class="input-group-addon">R1</span>
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input-group pt-tkt-row">
-                                        <span class="input-group-addon">R2</span>
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input-group pt-tkt-row">
-                                        <span class="input-group-addon">R3</span>
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-success">Save</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Third Container (Grid) -->
-    <div class="pt-container-fluid bg-3 text-center">
-        <div class="row pt-container">
-            <div class="col-md-12">
-                <h3 class="margin">Your available tickets</h3>
-            </div>
-
-        </div>
-
-        <div class="row pt-container">
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-primary pt-tkt-success">
-                    <div class="panel-heading">Ticket #: 0001</div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <table class="table pt-table table-bordered">
-                                <tr>
-                                    <td class="pt-row-number">R1</td>
-                                    <td class="pt-cross">01</td>
-                                    <td>02</td>
-                                    <td>03</td>
-                                    <td></td>
-                                    <td>05</td>
-                                    <td class="pt-cross">06</td>
-                                    <td></td>
-                                    <td>08</td>
-                                    <td class="pt-cross">09</td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-row-number">R2</td>
-                                    <td></td>
-                                    <td>02</td>
-                                    <td class="pt-cross">03</td>
-                                    <td>04</td>
-                                    <td></td>
-                                    <td>06</td>
-                                    <td class="pt-cross">07</td>
-                                    <td>08</td>
-                                    <td>09</td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-row-number">R3</td>
-                                    <td>01</td>
-                                    <td class="pt-cross">02</td>
-                                    <td>03</td>
-                                    <td class="pt-cross">04</td>
-                                    <td class="pt-cross">05</td>
-                                    <td></td>
-                                    <td>07</td>
-                                    <td class="pt-cross">08</td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="panel-footer">Result: </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Ticket #: 0001</div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <table class="table pt-table table-bordered">
-                                <tr>
-                                    <td class="pt-row-number">R1</td>
-                                    <td>01</td>
-                                    <td>02</td>
-                                    <td>03</td>
-                                    <td>04</td>
-                                    <td>05</td>
-                                    <td>06</td>
-                                    <td>07</td>
-                                    <td>08</td>
-                                    <td>09</td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-row-number">R2</td>
-                                    <td>01</td>
-                                    <td>02</td>
-                                    <td>03</td>
-                                    <td>04</td>
-                                    <td>05</td>
-                                    <td>06</td>
-                                    <td>07</td>
-                                    <td>08</td>
-                                    <td>09</td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-row-number">R3</td>
-                                    <td>01</td>
-                                    <td>02</td>
-                                    <td>03</td>
-                                    <td>04</td>
-                                    <td>05</td>
-                                    <td>06</td>
-                                    <td>07</td>
-                                    <td>08</td>
-                                    <td>09</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="panel-footer">Result: </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Ticket #: 0001</div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <table class="table pt-table table-bordered">
-                                <tr>
-                                    <td class="pt-row-number">R1</td>
-                                    <td>01</td>
-                                    <td>02</td>
-                                    <td>03</td>
-                                    <td>04</td>
-                                    <td>05</td>
-                                    <td>06</td>
-                                    <td>07</td>
-                                    <td>08</td>
-                                    <td>09</td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-row-number">R2</td>
-                                    <td>01</td>
-                                    <td>02</td>
-                                    <td>03</td>
-                                    <td>04</td>
-                                    <td>05</td>
-                                    <td>06</td>
-                                    <td>07</td>
-                                    <td>08</td>
-                                    <td>09</td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-row-number">R3</td>
-                                    <td>01</td>
-                                    <td>02</td>
-                                    <td>03</td>
-                                    <td>04</td>
-                                    <td>05</td>
-                                    <td>06</td>
-                                    <td>07</td>
-                                    <td>08</td>
-                                    <td>09</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="panel-footer">Result: </div>
-                </div>
-            </div>
-
-            <!-- <div class="col-md-12">
-                   <div class="col-md-4 col-sm-6 col-xs-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>-->
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="container-fluid bg-4 text-center">
-        <p> Author: Anand Dev Singh | 2017 | Source Code Available @ <a href="http://github.com/asananddevsingh" target="_blank">Github</a></p>
-    </footer>
+    <!-- app -->
+    <script src="./app/tambola.namespace.js"></script>
+    <script src="./app/tambola.module.js"></script>
+    <script src="./app/tambola.config.js"></script>
+    
+    <!-- Shared Files -->
+    <!--<script src="./app/shared/service/shared.service.js"></script>-->
+    
+    <!-- Home -->
+    <script src="./app/home/home.service.js"></script>    
+    <script src="./app/home/home.controller.js"></script>
 
 </body>
 

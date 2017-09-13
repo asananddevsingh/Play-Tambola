@@ -2,7 +2,7 @@
 
     'use strict';
     angular
-        .module('ccms')
+        .module('tambola')
         .factory('sharedService', sharedService);
 
     sharedService.$inject = ['readJsonFileService'];

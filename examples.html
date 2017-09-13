@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Bootstrap Theme Simply Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">    
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap3.3.7.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- First Container -->
+    <div class="container-fluid bg-1 text-center">
+        <h1>Play Tambola</h1>
+        <img src="/assets/images/1200x630bb.jpg" class="img-responsive img-circle" style="display:inline" alt="Tambola" width="300" height="300">
+        <h3>It's simple, It's fast and It's free</h3>
+    </div>
+
+    <!-- Second Container -->
+    <div class="pt-container-fluid bg-2 text-center">
+        <div class="row pt-container">
+            <div class="col-md-10 col-sm-6 col-xs-12 pt-margin-10">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Number" name="number">
+                    <div class="input-group-btn">
+                        <button class="btn btn-success btn-block" type="submit">GO</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 pt-margin-10">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#newTicket">Create new ticket</button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="newTicket" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header text-left">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Create New Ticket</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row pt-tkt-columns">
+                                        <span class="input-group-addon"></span>
+                                        <span class="input-group-addon">C1</span>
+                                        <span class="input-group-addon">C2</span>
+                                        <span class="input-group-addon">C3</span>
+                                        <span class="input-group-addon">C4</span>
+                                        <span class="input-group-addon">C5</span>
+                                        <span class="input-group-addon">C6</span>
+                                        <span class="input-group-addon">C7</span>
+                                        <span class="input-group-addon">C8</span>
+                                        <span class="input-group-addon">C9</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row">
+                                        <span class="input-group-addon">R1</span>
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row">
+                                        <span class="input-group-addon">R2</span>
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group pt-tkt-row">
+                                        <span class="input-group-addon">R3</span>
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Container (Grid) -->
+    <div class="pt-container-fluid bg-3 text-center">
+        <div class="row pt-container">
+            <div class="col-md-12">
+                <h3 class="margin">Your available tickets</h3>
+            </div>
+
+        </div>
+
+        <div class="row pt-container">
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="panel panel-primary pt-tkt-success">
+                    <div class="panel-heading">Ticket #: 0001</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <table class="table pt-table table-bordered">
+                                <tr>
+                                    <td class="pt-row-number">R1</td>
+                                    <td class="pt-cross">01</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td></td>
+                                    <td>05</td>
+                                    <td class="pt-cross">06</td>
+                                    <td></td>
+                                    <td>08</td>
+                                    <td class="pt-cross">09</td>
+                                </tr>
+                                <tr>
+                                    <td class="pt-row-number">R2</td>
+                                    <td></td>
+                                    <td>02</td>
+                                    <td class="pt-cross">03</td>
+                                    <td>04</td>
+                                    <td></td>
+                                    <td>06</td>
+                                    <td class="pt-cross">07</td>
+                                    <td>08</td>
+                                    <td>09</td>
+                                </tr>
+                                <tr>
+                                    <td class="pt-row-number">R3</td>
+                                    <td>01</td>
+                                    <td class="pt-cross">02</td>
+                                    <td>03</td>
+                                    <td class="pt-cross">04</td>
+                                    <td class="pt-cross">05</td>
+                                    <td></td>
+                                    <td>07</td>
+                                    <td class="pt-cross">08</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel-footer">Result: </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Ticket #: 0001</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <table class="table pt-table table-bordered">
+                                <tr>
+                                    <td class="pt-row-number">R1</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td>04</td>
+                                    <td>05</td>
+                                    <td>06</td>
+                                    <td>07</td>
+                                    <td>08</td>
+                                    <td>09</td>
+                                </tr>
+                                <tr>
+                                    <td class="pt-row-number">R2</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td>04</td>
+                                    <td>05</td>
+                                    <td>06</td>
+                                    <td>07</td>
+                                    <td>08</td>
+                                    <td>09</td>
+                                </tr>
+                                <tr>
+                                    <td class="pt-row-number">R3</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td>04</td>
+                                    <td>05</td>
+                                    <td>06</td>
+                                    <td>07</td>
+                                    <td>08</td>
+                                    <td>09</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel-footer">Result: </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Ticket #: 0001</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <table class="table pt-table table-bordered">
+                                <tr>
+                                    <td class="pt-row-number">R1</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td>04</td>
+                                    <td>05</td>
+                                    <td>06</td>
+                                    <td>07</td>
+                                    <td>08</td>
+                                    <td>09</td>
+                                </tr>
+                                <tr>
+                                    <td class="pt-row-number">R2</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td>04</td>
+                                    <td>05</td>
+                                    <td>06</td>
+                                    <td>07</td>
+                                    <td>08</td>
+                                    <td>09</td>
+                                </tr>
+                                <tr>
+                                    <td class="pt-row-number">R3</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td>04</td>
+                                    <td>05</td>
+                                    <td>06</td>
+                                    <td>07</td>
+                                    <td>08</td>
+                                    <td>09</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel-footer">Result: </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-12">
+                   <div class="col-md-4 col-sm-6 col-xs-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>-->
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p> Author: Anand Dev Singh | 2017 | Source Code Available @ <a href="http://github.com/asananddevsingh" target="_blank">Github</a></p>
+    </footer>
+
+    <!--Library References-->
+    <script type="text/javascript" src="./assets/libs/jquery/jquery3.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/libs/bootstrap/bootstrap3.3.7.min.js"></script>
+
+
+</body>
+
+</html>

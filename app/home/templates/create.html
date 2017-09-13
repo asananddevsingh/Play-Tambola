@@ -1,0 +1,70 @@
+<div class="pt-container-fluid bg-2 text-center">
+    <div class="row pt-container">
+        <div class="col-md-10 col-sm-6 col-xs-12 pt-margin-10">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Number" name="number">
+                <div class="input-group-btn">
+                    <button class="btn btn-success btn-block" type="submit">GO</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 pt-margin-10">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#newTicket">Create new ticket</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="newTicket" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header text-left">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Create New Ticket</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group pt-tkt-row pt-tkt-columns">
+                                    <span class="input-group-addon"></span>
+                                    <span class="input-group-addon">C1</span>
+                                    <span class="input-group-addon">C2</span>
+                                    <span class="input-group-addon">C3</span>
+                                    <span class="input-group-addon">C4</span>
+                                    <span class="input-group-addon">C5</span>
+                                    <span class="input-group-addon">C6</span>
+                                    <span class="input-group-addon">C7</span>
+                                    <span class="input-group-addon">C8</span>
+                                    <span class="input-group-addon">C9</span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group pt-tkt-row">
+                                    <span class="input-group-addon">R1</span>
+                                    <!--<input type="text" class="form-control" ng-model="home.createTicketModels.row1[r]" ng-repeat="r in home.rows[0].column">-->
+                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.rows[0].column" ng-model="home.createTicketModels.row1[key]">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group pt-tkt-row">
+                                    <span class="input-group-addon">R2</span>
+                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.rows[1].column" ng-model="home.createTicketModels.row2[key]">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group pt-tkt-row">
+                                    <span class="input-group-addon">R3</span>
+                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.rows[2].column" ng-model="home.createTicketModels.row3[key]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" ng-click="home.createTicket()">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
