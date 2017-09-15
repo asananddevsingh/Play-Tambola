@@ -70,7 +70,7 @@ input {
     font-weight: 600;
 }
 
-.input-group-addon {
+.pt-tkt-row .input-group-addon {
     margin: 0;
     padding: 0;
     min-width: 20px;
@@ -173,6 +173,9 @@ td.pt-cross::after {
     }
     .pt-tkt-columns>span {
         width: 27px;
+    }
+    #newTicket .modal-footer{
+        text-align: center;
     }
 }
 

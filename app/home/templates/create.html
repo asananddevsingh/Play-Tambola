@@ -24,6 +24,15 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Ticket #</span>
+                                    <input type="text" class="form-control" placeholder="Enter ticket number" ng-model="home.initTicketModels.ticketNum">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="input-group pt-tkt-row pt-tkt-columns">
                                     <span class="input-group-addon"></span>
                                     <span class="input-group-addon">C1</span>
@@ -40,26 +49,27 @@
                             <div class="col-md-12">
                                 <div class="input-group pt-tkt-row">
                                     <span class="input-group-addon">R1</span>
-                                    <!--<input type="text" class="form-control" ng-model="home.createTicketModels.row1[r]" ng-repeat="r in home.rows[0].column">-->
-                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.rows[0].column" ng-model="home.createTicketModels.row1[key]">
+                                    <!--<input type="text" class="form-control" ng-model="home.initTicketModels.row1[r]" ng-repeat="r in home.rows[0].column">-->
+                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.initTicketModels.row1" ng-model="home.initTicketModels.row1[key]">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="input-group pt-tkt-row">
                                     <span class="input-group-addon">R2</span>
-                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.rows[1].column" ng-model="home.createTicketModels.row2[key]">
+                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.initTicketModels.row2" ng-model="home.initTicketModels.row2[key]">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="input-group pt-tkt-row">
                                     <span class="input-group-addon">R3</span>
-                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.rows[2].column" ng-model="home.createTicketModels.row3[key]">
+                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.initTicketModels.row3" ng-model="home.initTicketModels.row3[key]">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-success" ng-click="home.createTicket()">Save</button>
+                        <button type="button" class="btn btn-danger" ng-click="home.clearTicket()">Clear</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
