@@ -1,14 +1,22 @@
 <div class="pt-container-fluid bg-2 text-center">
     <div class="row pt-container">
-        <div class="col-md-10 col-sm-6 col-xs-12 pt-margin-10">
+        <div class="col-md-4 col-sm-4 col-xs-12 pt-margin-10">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Number" name="number">
+                <input type="text" class="form-control" placeholder="Announced number" ng-model="home.crossNumber">
                 <div class="input-group-btn">
-                    <button class="btn btn-success btn-block" type="submit">GO</button>
+                    <button class="btn btn-success btn-block" ng-click="home.watchTickets('cross')">Watch</button>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-6 col-xs-12 pt-margin-10">
+        <div class="col-md-4 col-sm-4 col-xs-12 pt-margin-10">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Clear number" ng-model="home.clearNumber">
+                <div class="input-group-btn">
+                    <button class="btn btn-success btn-block" ng-click="home.watchTickets('clear')">Clear</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 pt-margin-10">
             <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#newTicket">Create new ticket</button>
         </div>
         <!-- Modal -->
@@ -26,7 +34,7 @@
                             <div class="col-md-12">
                                 <div class="input-group">
                                     <span class="input-group-addon">Ticket #</span>
-                                    <input type="text" class="form-control" placeholder="Enter ticket number" ng-model="home.initTicketModels.ticketNum">
+                                    <input type="text" class="form-control" placeholder="Enter ticket number" ng-model="home.initTicketModels.ticketNumber">
                                 </div>
                             </div>
                         </div>
@@ -46,29 +54,16 @@
                                     <span class="input-group-addon">C9</span>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-12" ng-repeat="row in home.initTicketModels.rows">
                                 <div class="input-group pt-tkt-row">
-                                    <span class="input-group-addon">R1</span>
-                                    <!--<input type="text" class="form-control" ng-model="home.initTicketModels.row1[r]" ng-repeat="r in home.rows[0].column">-->
-                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.initTicketModels.row1" ng-model="home.initTicketModels.row1[key]">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="input-group pt-tkt-row">
-                                    <span class="input-group-addon">R2</span>
-                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.initTicketModels.row2" ng-model="home.initTicketModels.row2[key]">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="input-group pt-tkt-row">
-                                    <span class="input-group-addon">R3</span>
-                                    <input type="text" class="form-control" ng-repeat="(key, value) in home.initTicketModels.row3" ng-model="home.initTicketModels.row3[key]">
+                                    <span class="input-group-addon">R{{$index+1}}</span>                                    
+                                    <input type="text" class="form-control" ng-repeat="(key, value) in row" ng-model="home.initTicketModels.rows[$parent.$index][key].value"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success" ng-click="home.createTicket()">Save</button>
+                        <button type="button" class="btn btn-success" ng-click="home.saveTicket(home.initTicketModels.rows)">Save</button>
                         <button type="button" class="btn btn-danger" ng-click="home.clearTicket()">Clear</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>

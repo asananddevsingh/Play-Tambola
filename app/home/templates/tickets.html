@@ -5,16 +5,16 @@
         </div>
     </div>
     <div class="row pt-container">
-        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="tkts in home.ticketList">
             <div class="panel panel-primary" ng-class="home.isSuccess ? 'pt-tkt-success' : ''">
-                <div class="panel-heading">Ticket Number: {{home.ticketList.ticketNum}}</div>
+                <div class="panel-heading">Ticket Number: {{tkts.ticketNumber}}</div>
                 <div class="panel-body">
                     <div class="row">
                         <table class="table pt-table table-bordered">
-                            <tr ng-repeat="(rowKeys, rowValues) in home.ticketList">
-                                <td class="pt-row-number">R1</td>
-                                <td ng-repeat="(key, value) in rowValues">
-                                    {{value}}
+                            <tr ng-repeat="(rowKeys, rowValues) in tkts.rows">
+                                <td class="pt-row-number">R{{$index + 1}}</td>
+                                <td ng-repeat="(key, value) in rowValues" data-pt="value" ng-model="home.watch" ng-class="value.isCrossed ? 'pt-cross' : '' ">
+                                    {{value.value}}
                                 </td>                                
                             </tr>                            
                         </table>
