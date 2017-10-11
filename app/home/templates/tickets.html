@@ -6,7 +6,7 @@
     </div>
     <div class="row pt-container">
         <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="tkts in home.ticketList">
-            <div class="panel panel-primary" ng-class="home.isSuccess ? 'pt-tkt-success' : ''">
+            <div ng-class="tkts.results.isSuccess ? 'panel panel-primary pt-tkt-success' : 'panel panel-primary'">
                 <div class="panel-heading">Ticket Number: {{tkts.ticketNumber}}</div>
                 <div class="panel-body">
                     <div class="row">
@@ -23,7 +23,8 @@
                 <div class="panel-footer">
                     <h4>Result:</h4>
                     <div class="row">
-                        <div ng-repeat="row in tkts.results.fullRows">Full Rows - {{row + 1}}</div>
+                        <div ng-repeat="row in tkts.results.fullRows">Full row - {{row + 1}}</div>
+                        <div ng-show="tkts.results.isFullHouse">Woow! It's full house</div>
                     </div>
                 </div>
             </div>

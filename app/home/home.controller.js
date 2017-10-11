@@ -1,9 +1,9 @@
 (function (angular) {
     'use strict';
     angular.module('tambola').controller('HomeController', HomeController);
-    HomeController.$inject = ['$scope'];
+    HomeController.$inject = ['$timeout'];
 
-    function HomeController() {
+    function HomeController($timeout) {
         var vm = this;
         /************************* Seting up the initial state - START ************************/
         vm.ticketList = [];
@@ -14,7 +14,8 @@
         vm.initTicketModels_test = {
             ticketNumber: 'A1001'
             , results: {
-                isFullHouse: false
+                isSuccess: false
+                , isFullHouse: false
                 , isCorner: false
                 , fullRows: []
             }
@@ -174,23 +175,33 @@
                                 item['isCrossed'] = isCrossed;
                             }
                         });
-                        // Look for full row.
-                        var isOpenValue = false;
+                        // Look for full row.                        
                         for (var itemKey in rowItem) {
                             fullRowsIndex = rowIndex;
                             if (rowItem[itemKey]['value'] && !rowItem[itemKey]['isCrossed']) {
                                 fullRowsIndex = undefined;
                                 break;
                             }
-                        };                        
+                        };
                         if (typeof fullRowsIndex !== 'undefined') {
                             var rowsArray = vm.ticketList[listIndex]['results']['fullRows'];
-                            rowsArray.push(fullRowsIndex);
+                            if (rowsArray.indexOf(fullRowsIndex) === -1) {
+                                rowsArray.push(fullRowsIndex);
+                                vm.ticketList[listIndex]['results']['isSuccess'] = true;
+                                if (vm.ticketList[listIndex]['results']['fullRows'].length !== listItem.rows.length) {
+                                    $timeout(function () {
+                                        vm.ticketList[listIndex]['results']['isSuccess'] = false;
+                                    }, 4000)
+                                }
+                            }
                             var uniqueArray = rowsArray.filter(function (item, pos) {
                                 return rowsArray.indexOf(item) == pos;
                             });
-                            vm.ticketList[listIndex]['results']['fullRows'] = uniqueArray.sort();
-                            //console.log(vm.ticketList[listIndex]['results']);
+                            vm.ticketList[listIndex]['results']['fullRows'] = uniqueArray; //.sort();                            
+                        }
+                        if (vm.ticketList[listIndex]['results']['fullRows'].length === listItem.rows.length) {
+                            vm.ticketList[listIndex]['results']['isFullHouse'] = true;
+                            vm.ticketList[listIndex]['results']['isSuccess'] = true;
                         }
                     });
                 });
@@ -223,6 +234,7 @@
             this.columnsCount = columnsCount || 9;
             this.baseModel = {
                 ticketNumber: ''
+                , isSuccess: false
                 , results: {
                     isFullHouse: false
                     , isCorner: false
