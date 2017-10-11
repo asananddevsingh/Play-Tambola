@@ -1,8 +1,7 @@
 <div class="pt-container-fluid bg-3 text-center">
     <div class="row pt-container">
         <div class="col-md-12">
-            <h3 class="margin">Your available tickets</h3>
-        </div>
+            <h3 class="margin">Your available tickets</h3> </div>
     </div>
     <div class="row pt-container">
         <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="tkts in home.ticketList">
@@ -13,10 +12,8 @@
                         <table class="table pt-table table-bordered">
                             <tr ng-repeat="(rowKeys, rowValues) in tkts.rows">
                                 <td class="pt-row-number">R{{$index + 1}}</td>
-                                <td ng-repeat="(key, value) in rowValues" data-pt="value" ng-model="home.watch" ng-class="value.isCrossed ? 'pt-cross' : '' ">
-                                    {{value.value}}
-                                </td>                                
-                            </tr>                            
+                                <td ng-repeat="(key, value) in rowValues" data-pt="value" ng-model="home.watch" ng-class="value.isCrossed ? 'pt-cross' : '' "> {{value.value}} </td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -24,6 +21,7 @@
                     <h4>Result:</h4>
                     <div class="row">
                         <div ng-repeat="row in tkts.results.fullRows">Full row - {{row + 1}}</div>
+                        <div ng-show="tkts.results.isCorner">Yesss! You have corners {{tkts.results.cornerValues.length}}</div>
                         <div ng-show="tkts.results.isFullHouse">Woow! It's full house</div>
                     </div>
                 </div>
@@ -76,6 +74,5 @@
                 </div>
                 <div class="panel-footer">Result: </div>
             </div>
-        </div>-->
-    </div>
+        </div>--></div>
 </div>

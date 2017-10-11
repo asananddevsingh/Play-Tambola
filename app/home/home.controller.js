@@ -9,9 +9,9 @@
         vm.ticketList = [];
         vm.ticketModels = [];
         /*Fixed ticket*/
-        var newTicket = new CreateTicket();
-        vm.initTicketModels = newTicket.init();
-        vm.initTicketModels_test = {
+        /*var newTicket = new CreateTicket();
+        vm.initTicketModels = newTicket.init();*/
+        vm.initTicketModels = {
             ticketNumber: 'A1001'
             , results: {
                 isSuccess: false
@@ -23,7 +23,7 @@
                 {
                     'r1c1': {
                         'value': '1'
-                        , 'isCrossed': true
+                        , 'isCrossed': false
                     , }
                     , 'r1c2': {
                         'value': ''
@@ -51,7 +51,7 @@
                     , }
                     , 'r1c8': {
                         'value': '72'
-                        , 'isCrossed': true
+                        , 'isCrossed': false
                     , }
                     , 'r1c9': {
                         'value': ''
@@ -99,7 +99,7 @@
                 , {
                     'r3c1': {
                         'value': '8'
-                        , 'isCrossed': true
+                        , 'isCrossed': false
                     , }
                     , 'r3c2': {
                         'value': ''
@@ -166,6 +166,9 @@
         function scanTickets(number, isCrossed) {
             if (number) {
                 var fullRowsIndex;
+                var cornerFirstRow = [];
+                var cornerLastRow = [];
+                var cornerValues = [];
                 angular.forEach(vm.ticketList, function (listItem, listIndex) {
                     angular.forEach(listItem.rows, function (rowItem, rowIndex) {
                         // Set the announced value.
@@ -199,6 +202,25 @@
                             });
                             vm.ticketList[listIndex]['results']['fullRows'] = uniqueArray; //.sort();                            
                         }
+                        //Look for corner.                        
+                        for (var itemKey in rowItem) {
+                            if (rowItem[itemKey]['value']) {
+                                if (rowIndex === 0) {
+                                    cornerFirstRow.push(rowItem[itemKey]['value']);
+                                }
+                                if (rowIndex === listItem.rows.length - 1) {
+                                    cornerLastRow.push(rowItem[itemKey]['value']);
+                                }
+                                if (cornerFirstRow.length && cornerLastRow.length) {
+                                    cornerFirstRow.splice(1, cornerFirstRow.length - 2)
+                                    cornerLastRow.splice(1, cornerLastRow.length - 2)
+                                    cornerValues = cornerFirstRow.concat(cornerLastRow);
+                                    console.log(cornerValues);
+                                }                                
+                            }
+                        };
+                        
+                        //Look for full house.
                         if (vm.ticketList[listIndex]['results']['fullRows'].length === listItem.rows.length) {
                             vm.ticketList[listIndex]['results']['isFullHouse'] = true;
                             vm.ticketList[listIndex]['results']['isSuccess'] = true;
@@ -209,9 +231,8 @@
         }
 
         function saveTicket(data) {
-            console.log(data);
             vm.ticketList.push(angular.copy(vm.initTicketModels));
-            //angular.element('[data-dismiss="modal"]').trigger('click');                      
+            //angular.element('[data-dismiss="modal"]').trigger('click');
         }
 
         function resetTicketValues(values) {
